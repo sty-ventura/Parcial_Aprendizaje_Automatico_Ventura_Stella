@@ -2,67 +2,61 @@
 ## Aprendizaje Automático
 Profesor: Martin Mirabete- 
 Alumna: Ventura Stella Maris
+# Predicción de la evolución de los ingresos del sector privado registrado en Tierra del Fuego  
 
+## Descripción del Proyecto  
+Este proyecto aplica **Aprendizaje Automático** para analizar la evolución de los ingresos del sector privado registrado en **Tierra del Fuego**, una provincia con características económicas particulares.  
 
-# **Organización del Proyecto:**
-├── LICENSE            <- Open-source license if one is chosen
+Dada la alta inflación y el impacto del costo de vida en la región, el objetivo es desarrollar un modelo predictivo que permita **estimar la remuneración promedio** y su relación con la **Canasta Básica Total (CBT) y el endeudamiento de los hogares**.
 
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
+## 🎯 Objetivo del Análisis  
+Desarrollar un **modelo de regresión supervisada** para predecir la evolución mensual de los ingresos del sector privado en Tierra del Fuego, evaluando su relación con el costo de vida y el nivel de endeudamiento.  
 
-├── README.md          <- The top-level README for developers using this project.
+### **Objetivos específicos**  
+✅ **Limpieza y transformación** de la serie histórica de ingresos según rama de actividad.  
+✅ **Integración de datos complementarios** como CBT y deuda doméstica.  
+✅ **Aplicación de modelos de regresión** (Regresión Lineal, Árboles de Decisión, Random Forest, XGBoost, MLPRegressor).  
+✅ **Evaluación del modelo** con métricas como MAE, RMSE y R².  
+✅ **Comparación entre ingresos y crecimiento de la CBT** para estimar la variación del poder adquisitivo.  
 
-├── data
+## 📂 Origen y Acceso al Dataset  
+El dataset utilizado proviene de **fuentes públicas** como:  
+- **Banco Central de la República Argentina (BCRA)** → Datos de pagos minoristas y crédito.  
+- **IPIEC** → Información sobre ingresos del sector privado registrado.  
+- **IPIEC** →  sobre inflación y evolución de precios.  
 
-│   ├── external       <- Data from third party sources.
+Se han realizado procesos de **limpieza y normalización** para estructurar las variables y facilitar su integración en el modelo de predicción.
 
-│   ├── interim        <- Intermediate data that has been transformed.
+## 🛠️ Tecnologías Utilizadas  
+Este proyecto se desarrolla **exclusivamente en Python**, utilizando herramientas como:  
+- **Pandas** para manipulación de datos.  
+- **Matplotlib y Seaborn** para visualización de tendencias.  
+- **Scikit-learn** para entrenamiento de modelos de Machine Learning.  
+- **Git/GitHub** para gestión de versiones y documentación.  
 
-│   ├── processed      <- The final, canonical data sets for modeling.
+## 📑 Estructura del Repositorio  
+📁 datasets/               → Archivos de datos originales y versiones preprocesadas en .csv.
+📁 notebooks/              → Código para análisis exploratorio y modelos en Python.
+📁 reports/                → Documentos con hallazgos y visualizaciones.
+📄 README.md               → Documentación del proyecto.
 
-│   └── raw            <- The original, immutable data dump.
-
-
-├── docs               <- A default mkdocs project; see mkdocs.org for details
-
-
-├── models             <- Trained and serialized models, model predictions, or model summaries
-
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-                         `1.0-jqp-initial-data-exploration`.
-
-├── pyproject.toml     <- Project configuration file with package metadata for {{ cookiecutter.module_name }}
-│                         and configuration for tools like black
-
-
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-
-
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-
-│   └── figures        <- Generated graphics and figures to be used in reporting
-
-
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-
+├── data/                  # Datos en distintos niveles de procesamiento  
+│   ├── raw/               # Datos originales sin procesar  
+│   ├── processed/         # Datos listos para entrenar  
+│   └── interim/           # Datos intermedios  
 │
-├── setup.cfg          <- Configuration file for flake8
+├── docs/                  # Documentación del proyecto  
+├── models/                # Modelos entrenados y serializados  
+├── notebooks/             # Jupyter notebooks para análisis y entrenamiento  
+├── references/            # Fuentes y artículos relacionados  
+├── reports/               # Documentos y gráficos generados automáticamente  
+├── src/                   # Código fuente del proyecto  
+│   ├── data/              # Scripts para carga y limpieza de datos  
+│   ├── features/          # Scripts de ingeniería de características  
+│   ├── models/            # Entrenamiento y evaluación de modelos  
+│   └── visualization/     # Funciones de gráficos y visualización  
 │
-└── {{ cookiecutter.module_name }}                <- Source code for use in this project.
-    │
-    ├── __init__.py    <- Makes {{ cookiecutter.module_name }} a Python module
-    │
-    ├── data           <- Scripts to download or generate data
-    │   └── make_dataset.py
-    │
-    ├── features       <- Scripts to turn raw data into features for modeling
-    │   └── build_features.py
-    │
-    ├── models         <- Scripts to train models and then use trained models to make
-    │   │                 predictions
-    │   ├── predict_model.py
-    │   └── train_model.py
-    │
-    └── visualization  <- Scripts to create exploratory and results oriented visualizations
-        └── visualize.py
+├── .gitignore             # Archivos a excluir en Git  
+├── LICENSE                # Licencia del proyecto  
+├── README.md              # Documentación del proyecto  
+└── requirements.txt       # Dependencias necesarias  
