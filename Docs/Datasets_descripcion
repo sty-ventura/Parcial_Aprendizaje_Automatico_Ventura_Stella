@@ -1,0 +1,45 @@
+# 📊 Descripción de los Dataset - Proyecto de Aprendizaje Automático  
+
+## 1️⃣ **Información General de los Datasets**  
+
+El dataset "Remuneración promedio de los trabajadores registrados del sector privado" contiene datos sobre la **evolución de los ingresos del sector privado registrado en Tierra del Fuego**, comparados con el Dataset "Variaciones Interanuales según divisiones de la canasta" y el uso de tarjetas de crédito en Argentina, relevados en el Dataset "Serie Anual 2023".  
+
+El objetivo de los datasets es proporcionar información clave para entrenar un modelo predictivo que permita analizar la relación entre salarios, inflación y consumo financiero.  
+
+## 2️⃣ **Cantidad de Instancias y Características** - en "Remuneración promedio de los trabajadores registrados del sector privado":
+
+- **Cantidad de registros:** Aproximadamente `74` filas, dependiendo del período analizado.  
+- **Frecuencia temporal:** Datos mensuales desde **1995 hasta 2024**.  
+- **Columnas principales:**  
+  - `Rama de actividad` → Categoría económica (industria, comercio, etc.).   
+  - `Mes y año` → periodo reportado.  
+
+## **Cantidad de Instancias y Características** - en "Variaciones Interanuales según divisiones de la canasta":
+
+- **Cantidad de registros:** Aproximadamente `28` filas.  
+- **Frecuencia temporal:** Datos mensuales desde **2017 hasta 2025**.  
+- **Columnas principales:*Nivel general y divisiones, meses y años*  
+
+## **Cantidad de Instancias y Características** - en "Serie Anual 2023":
+
+- **Cantidad de registros-Pago Minoristas:** Aproximadamente `86` filas, que representan la evolución temporal.  
+- **Frecuencia temporal:** Datos mensuales desde **2017 hasta 2023**.  
+- **Columnas principales:** son 43 y representan la diversidad de medios de pago minoristas utilizados, como insumo para el desarrollo se tomarán las de "Tarjeta de crédito, Cantidad, Monto nominal y Monto en pesos"
+
+Cada variable ha sido seleccionada para evaluar la relación entre **poder adquisitivo, nivel de precios y tendencias de consumo**.
+
+## 3️⃣ **Origen y Adquisición de los Dataset**  
+Estos datasets fueron obtenidos de **fuentes oficiales de datos públicos**, asegurando su calidad y relevancia:  
+- **Banco Central de la República Argentina (BCRA)** → Datos de pagos minoristas y consumo con tarjetas de crédito.  
+- **IPIEC** → Información salarial del sector privado registrado.  
+- **IPIEC** sobre inflación y evolución de precios.  
+
+### **Preprocesamiento de Datos**  
+Se han aplicado las siguientes transformaciones antes de integrar los datos en el modelo:  
+✅ **Eliminación de valores nulos e inconsistentes**.  
+✅ **Normalización de montos ajustados por inflación**.  
+✅ **Conversión de formatos para integración en Python** (`.csv` para compatibilidad).  
+✅ **Unificación de fechas** para análisis temporal.  
+
+Este proceso garantiza que los datos sean limpios y adecuados para su uso en **modelos predictivos de Machine Learning**.
+
