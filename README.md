@@ -47,7 +47,7 @@ El desarrollo se realizó íntegramente en **Python**, utilizando:
 - `jupyter notebook` para análisis exploratorio  
 - `git` y `GitHub` para control de versiones  
 - `cookiecutter` para estructuración del proyecto  
-
+## video explicativo: https://drive.google.com/file/d/1rCC8R_5zC9tYD0iV0d8Q4ot71ZB6CJYB/view?usp=drive_link
 ---
 
 ## 🧱 Estructura del Repositorio (estilo Cookiecutter)
