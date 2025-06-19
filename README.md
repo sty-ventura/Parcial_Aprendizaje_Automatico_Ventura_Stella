@@ -48,6 +48,7 @@ El desarrollo se realizó íntegramente en **Python**, utilizando:
 - `git` y `GitHub` para control de versiones  
 - `cookiecutter` para estructuración del proyecto  
 ## 🎬 video explicativo: https://drive.google.com/file/d/1rCC8R_5zC9tYD0iV0d8Q4ot71ZB6CJYB/view?usp=drive_link
+📌 Nota: el modelo de aprendizaje automático se encuentra en la carpeta models.
 ---
 
 ## 🧱 Estructura del Repositorio (estilo Cookiecutter)
